@@ -246,7 +246,8 @@ function ex14() {
 }
 
 // =============================================================================
-//
+// FUNCTION RESTRUCTURING ARRAYS
+// nelle function che hanno come parametri ARRYS l'associazione viene fatta in base alla posizione
 function ex15() {
 
   function creaMatrice([ righe = 5, colonne = 3] = []) {
@@ -259,9 +260,75 @@ function ex15() {
     console.log(creaMatrice([2, 4]));           // Creo una matrice 2 x 4
     console.log(creaMatrice([undefined, 6]));   // Creo una matrice 5 x 6
     console.log(creaMatrice([, 10]));           // Creo una matrice 5 x 10
-    console.log(creaMatrice());                 // Creo una matrice 5 x 3
+    console.log(creaMatrice());                 // ERRORE - function SENZA ' = [] '
+    console.log(creaMatrice());                 // Creo una matrice 5 x 3 - function CON ' = {} '
 
 }
+
+// =============================================================================
+//FUNCTION DESTRUCTURING OBJECTS
+// nelle function che hanno come parametri OBJS l'associazione viene fatta in base al nome e non alla posizione
+function ex16() {
+
+  function reportAuto({ veicoli = 1, auto = ['Panda']} = {} ){
+
+  const testoVeicolo = veicoli === 1 ? 'veicolo' : 'veicoli';
+    return `Hai ${veicoli} ${testoVeicolo} : ${auto.join(` e `)}.`;
+
+}
+
+  console.log(reportAuto({}));                                // Hai 1 veicolo : Panda.
+  console.log(reportAuto({veicoli:2}));                       // Hai 2 veicoli : Panda.
+  console.log(reportAuto({auto: ['Ferrari']}));               // Hai 1 veicolo : Ferrari.
+  console.log(reportAuto({auto: ['Ferrari', 'Mercedes']}));   // Hai 1 veicolo : Ferrari e Mercedes.
+  console.log(reportAuto({cavalli: [ 1000 ]}));               // Hai 1 veicolo : Panda.
+  console.log(reportAuto());                                  // ERRORE - function SENZA ' = {} '
+  console.log(reportAuto());                                  // Hai 1 veicolo : Panda. - function CON ' = {} '
+  
+}
+
+// =============================================================================
+//
+ex17 = () => {
+
+  function creaTavolo({piedi = 4, colore = 'rosso', forma = 'quadrato'} = {}) {
+
+    const valori = `Il tuo tavolo ha ${piedi} piedi è di colore ${colore} ed è ${forma}`;
+    return valori;
+  }
+
+  console.log(creaTavolo());
+  console.log(creaTavolo({}));
+  console.log(creaTavolo({piedi: 3, forma: 'rotondo'}));
+  
+}
+
+// =============================================================================
+// CLASSI ( introdotte in ES6 )
+ex18 = () => {
+
+
+}
+
+
+// =============================================================================
+//
+
+
+
+// =============================================================================
+//
+
+
+
+// =============================================================================
+//
+
+
+// =============================================================================
+//
+
+
 
 // =============================================================================
 //
