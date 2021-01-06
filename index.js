@@ -288,8 +288,8 @@ function ex16() {
 }
 
 // =============================================================================
-//
-ex17 = () => {
+// EXERCISE
+let ex17 = () => {
 
   function creaTavolo({piedi = 4, colore = 'rosso', forma = 'quadrato'} = {}) {
 
@@ -304,17 +304,22 @@ ex17 = () => {
 }
 
 // =============================================================================
-// CLASSI ( introdotte in ES6 )
-ex18 = () => {
+// EXPORT MODULI
+// vedi file pianeti.js
 
-
-}
-
+export let pi = 3.14
+export let square = (x) => x * x;  
+export let surfaceArea = (x) => 4 * pi * square(x);
 
 // =============================================================================
-//
+//EXPORT MODULI DEFAULT
+// vedi file pianeti.js
 
+  let pi2 = 3.14
+  let square2 = (x) => x * x;  
+  let surfaceArea2 = (x) => 4 * pi * square(x);
 
+  export default square2;
 
 // =============================================================================
 //
