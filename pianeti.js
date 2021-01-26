@@ -9,7 +9,7 @@ import square2 from './index.js'
 
 // =============================================================================
 // IMPORT EVERY SINGLE FUNCTION
-// imnport {<function name>} from '<path file>'
+// import {<function name>} from '<path file>'
 
 let ex01 = () => {
 const annoQuadrato = square(2020);

@@ -1,3 +1,5 @@
+// CORSO: REACT E REDUX: SVILUPPA APPLICAZIONI DA ZERO
+
 // =============================================================================
 // RESTRUCTURING PRE ES6
 function ex01() {
@@ -14,17 +16,20 @@ function ex01() {
   };
 
   let ageGab = utente.datiPersonali.anni; // 35
+
+  let copiaUtente = {...utente}; // prende le proprietà di "utente"
   
   
   let coord = [1, 2, 3];
   let x = coord[0]; // 1
-  let Y = coord[1]; // 2
-  let Z = coord[2]; // 3
+  let y = coord[1]; // 2
+  let z = coord[2]; // 3
 
   console.log(ageGab);
-  console.log(x, y. z);
+  console.log(x, y, z);
+  console.log(copiaUtente);
 }
-
+ex01();
 // =============================================================================
 // RESTRUCTURING POST ES6
 function ex02() {
